@@ -16,6 +16,7 @@ def main():
     from nltk.stem import WordNetLemmatizer
 
     lemmatizer = WordNetLemmatizer()
+    nltk.download()
     nltk.download("punkt")
     nltk.download("omw-1.4")
     nltk.download("wordnet")
