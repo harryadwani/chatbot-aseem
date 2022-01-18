@@ -3,55 +3,61 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css.css')}}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="row">
         <div class="col-md-10 mr-auto ml-auto">
-    <h1>Aseem</h1>
-    <form>
-        <div id="userInput" class="row">
-            <div class="col-md-10">
-                <input id="text" type="text" name="msg" placeholder="Message" class="form-control">
-                <button type="submit" id="send" class="btn btn-warning">Send</button>
-            </div>
+            <h1>Aseem</h1>
+            <form>
+                <div id="userInput" class="row">
+                    <div class="col-md-10">
+                        <input id="text" type="text" name="msg" placeholder="Message" class="form-control">
+                        <button type="submit" id="send" class="btn btn-warning">Send</button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </form>
-</div>
-</div>
+    </div>
 
-<script>
-    $(document).ready(function() {
-        $("form").on("submit", function(event) {
-            var rawText = $("#text").val();
-            var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
-            $("#text").val("");
-            $("#chatbox").append(userHtml);
-            document.getElementById("userInput").scrollIntoView({
-                block: "start",
-                behavior: "smooth",
-            });
-            var data = {msg: rawText}
-            $.ajax({
-                dataType : "json",
-                contentType: "application/json; charset=utf-8",
-                data: JSON.stringify(data),
-                type: "POST",
-                url: "/get",
-            }).done(function(data) {
-                var botHtml = '<p class="botText"><span>' + data + "</span></p>";
-                $("#chatbox").append($.parseHTML(botHtml));
+    <p id='chatbox'></p>
+
+    <script>
+        $(document).ready(function () {
+            $("form").on("submit", function (event) {
+                var rawText = $("#text").val();
+                var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+                $("#text").val("");
+                $("#chatbox").append(userHtml);
                 document.getElementById("userInput").scrollIntoView({
                     block: "start",
                     behavior: "smooth",
                 });
+                var data = { msg: rawText }
+                $.ajax({
+                    // dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(data),
+                    type: "POST",
+                    async: false,
+                    url: "/get",
+                }).done(function (data) {
+                    console.log(data)
+                    var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+                    $("#chatbox").append($.parseHTML(botHtml));
+                    document.getElementById("userInput").scrollIntoView({
+                        block: "start",
+                        behavior: "smooth",
+                    });
+                }).fail(function () {
+                    alert("Sorry. Server unavailable. ");
+                });
+                event.preventDefault();
             });
-            event.preventDefault();
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>
