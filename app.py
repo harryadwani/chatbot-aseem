@@ -16,12 +16,13 @@ words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
 
 app = Flask(__name__)
-# cors = CORS(app)
+CORS(app)
 # app.config["CORS_HEADERS"] = "Content-Type"
+
+# @cross_origin()
 
 
 @app.route("/")
-@cross_origin()
 def home():
     return "ASEEM CHATBOT API"
 
