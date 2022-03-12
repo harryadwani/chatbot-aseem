@@ -16,8 +16,8 @@ words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
 
 app = Flask(__name__)
-cors = CORS(app)
-app.config["CORS_HEADERS"] = "Content-Type"
+# cors = CORS(app)
+# app.config["CORS_HEADERS"] = "Content-Type"
 
 
 @app.route("/")
@@ -115,4 +115,3 @@ def getResponse(ints, intents_json):
 
 if __name__ == "__main__":
     app.run(debug=False)
-    
