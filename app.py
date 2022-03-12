@@ -3,9 +3,11 @@ import numpy as np
 import pickle
 import json
 from flask import Flask, render_template, request
+from flask_cors import CORS, cross_origin
 import nltk
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
+
 lemmatizer = WordNetLemmatizer()
 
 model = load_model("chatbot_model.h5")
@@ -14,21 +16,26 @@ words = pickle.load(open("words.pkl", "rb"))
 classes = pickle.load(open("classes.pkl", "rb"))
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config["CORS_HEADERS"] = "Content-Type"
+
 
 @app.route("/")
+@cross_origin()
 def home():
     return "ASEEM CHATBOT API"
+
 
 @app.route("/get", methods=["POST"])
 def chatbot_response():
     msg = request.json
     msg = msg["msg"]
-    if msg.startswith('my name is'):
+    if msg.startswith("my name is"):
         name = msg[11:]
         ints = predict_class(msg, model)
         res1 = getResponse(ints, intents)
         res = res1.replace("{n}", name)
-    elif msg.startswith('hi my name is'):
+    elif msg.startswith("hi my name is"):
         name = msg[14:]
         ints = predict_class(msg, model)
         res1 = getResponse(ints, intents)
@@ -38,17 +45,18 @@ def chatbot_response():
         res = getResponse(ints, intents)
 
     return res
+
 
 @app.route("/demo", methods=["POST"])
 def demo():
     msg = request.form["msg"]
 
-    if msg.startswith('my name is'):
+    if msg.startswith("my name is"):
         name = msg[11:]
         ints = predict_class(msg, model)
         res1 = getResponse(ints, intents)
         res = res1.replace("{n}", name)
-    elif msg.startswith('hi my name is'):
+    elif msg.startswith("hi my name is"):
         name = msg[14:]
         ints = predict_class(msg, model)
         res1 = getResponse(ints, intents)
@@ -58,6 +66,7 @@ def demo():
         res = getResponse(ints, intents)
 
     return res
+
 
 @app.route("/demo", methods=["GET"])
 def demo1():
@@ -66,9 +75,9 @@ def demo1():
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(
-        word.lower()) for word in sentence_words]
+    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
+
 
 def bow(sentence, words, show_details=True):
     sentence_words = clean_up_sentence(sentence)
@@ -81,6 +90,7 @@ def bow(sentence, words, show_details=True):
                     print("found in bag: %s" % w)
     return np.array(bag)
 
+
 def predict_class(sentence, model):
     p = bow(sentence, words, show_details=False)
     res = model.predict(np.array([p]))[0]
@@ -92,6 +102,7 @@ def predict_class(sentence, model):
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
     return return_list
 
+
 def getResponse(ints, intents_json):
     tag = ints[0]["intent"]
     list_of_intents = intents_json["intents"]
@@ -100,6 +111,7 @@ def getResponse(ints, intents_json):
             result = random.choice(i["responses"])
             break
     return result
+
 
 if __name__ == "__main__":
     app.run(debug=False)
