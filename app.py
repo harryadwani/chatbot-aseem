@@ -105,13 +105,18 @@ def predict_class(sentence, model):
 
 
 def getResponse(ints, intents_json):
-    tag = ints[0]["intent"]
-    list_of_intents = intents_json["intents"]
-    for i in list_of_intents:
-        if i["tag"] == tag:
-            result = random.choice(i["responses"])
-            break
-    return result
+    try:
+        tag = ints[0]["intent"]
+        list_of_intents = intents_json["intents"]
+        for i in list_of_intents:
+            if i["tag"] == tag:
+                result = random.choice(i["responses"])
+                break
+        return result
+    except:
+        return str(
+            "Make sure you are using a supported browser (Chrome/Firefox/Safari) in order to use our services correctly. Also please ensure that you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>. If you still can't resolve the problem, please write to the developer at 'harryadwani9@gmail.com'"
+        )
 
 
 if __name__ == "__main__":
