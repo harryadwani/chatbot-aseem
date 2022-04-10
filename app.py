@@ -31,7 +31,7 @@ def home():
 def chatbot_response():
     msg = request.json
     msg = msg["msg"]
-    if  msg == "yes" or msg=="YES" :
+    if  msg == "yes" or msg=="Yes" :
         return "I am glad that I could help you out!"
     if  msg == "no" or msg=="No":
         return "I am so sorry about that. For more assistance you can write to the developer at <a href=\"mailto:harryadwani9@gmail.com\">Send email</a>"
