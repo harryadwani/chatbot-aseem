@@ -31,22 +31,27 @@ def home():
 def chatbot_response():
     msg = request.json
     msg = msg["msg"]
+    if  msg == "yes" or msg=="YES" :
+        return "I am glad that I could help you out!"
+    if  msg == "no" or msg=="No":
+        return "I am so sorry about that. For more assistance you can write to the developer at <a href=\"mailto:harryadwani9@gmail.com\">Send email</a>"
     if msg.startswith("my name is"):
         name = msg[11:]
         ints = predict_class(msg, model)
-        res1 = getResponse(ints, intents)
+        res1,msg_tag = getResponse(ints, intents)
         res = res1.replace("{n}", name)
     elif msg.startswith("hi my name is"):
         name = msg[14:]
         ints = predict_class(msg, model)
-        res1 = getResponse(ints, intents)
+        res1,msg_tag = getResponse(ints, intents)
         res = res1.replace("{n}", name)
     else:
         ints = predict_class(msg, model)
-        res = getResponse(ints, intents)
-
-    return res
-
+        res,msg_tag = getResponse(ints, intents)
+    # if  msg.find("hi")==1 or msg.find("hello")==1 or msg.find("thanks")==1 or msg.find("thank you")==1 or msg.find("bye")==1:
+    if msg_tag in ["greetings","goodbye","thanks","noanswer",'name1','name','fav','need','lang']:
+        return res
+    return res + "<br><br><em> Did I solve your problem?(Yes/No)"
 
 @app.route("/demo", methods=["POST"])
 def demo():
@@ -112,10 +117,10 @@ def getResponse(ints, intents_json):
             if i["tag"] == tag:
                 result = random.choice(i["responses"])
                 break
-        return result
+        return result,i["tag"]
     except:
         return str(
-            "Make sure you are using a supported browser (Chrome/Firefox/Safari) in order to use our services correctly. Also please ensure that you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>. If you still can't resolve the problem, please write to the developer at 'harryadwani9@gmail.com'"
+            "Make sure you are using a supported browser (Chrome/Firefox/Safari) in order to use our services correctly. Also please ensure that you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>."
         )
 
 

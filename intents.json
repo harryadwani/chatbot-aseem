@@ -82,6 +82,7 @@
             "tag": "name1",
             "patterns": [
                 "what's your name?",
+                "whats your name?",
                 "who are you?",
                 "what am I?"
             ],
@@ -143,7 +144,8 @@
             "tag": "lang",
             "patterns": [
                 "What language are you written in ?",
-                "How are you built?"
+                "How are you built?",
+                "who made you?"
             ],
             "responses": [
                 "Python",
@@ -279,8 +281,7 @@
         {
             "tag": "login",
             "patterns": [
-                "how to login",
-                "login",
+                "how to login", 
                 "signin",
                 "login using account",
                 "login using username and password"
@@ -347,7 +348,8 @@
             "patterns": [
                 "how can i set password to enter the room",
                 "password to enter room",
-                "password to enter"
+                "password to enter",
+                "how to set password"
             ],
             "responses": [
                 "After entering a meeting room, click on menu button at the bottom and then click on 'Set Room Password'. If you wish to remove the room password then leave the password field empty after clicking on  'Set Room Password'."
@@ -364,7 +366,9 @@
                 "invite to the meeting",
                 "invite to meeting",
                 "invite to room",
-                "share link of invite"
+                "share link of invite",
+                "how to share meeting link",
+                "how to share meeting"
             ],
             "responses": [
                 "You can simply copy the URL in the meeting screen of your browser and share it with others."
@@ -390,7 +394,7 @@
                 "video not working"
             ],
             "responses": [
-                "Click on the camera icon on screen to switch on/off the camera.Fi   If you still can't turn on your webcam, please ensure you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>"
+                "Click on the camera icon on screen to switch on/off the camera. If you still can't turn on your webcam, please ensure you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>"
             ],
             "context": [
                 ""
@@ -459,9 +463,9 @@
             "tag": "display",
             "patterns": [
                 "can i change my display name",
-                "display name",
-                "visible name",
-                "change my name"
+                "how to change display name",
+                "how to change visible name",
+                "how to change my name in meeting"
             ],
             "responses": [
                 "You can change your display name. Before joining the meeting you will get an option to change your display name."
@@ -538,7 +542,7 @@
                 "contact tech support"
             ],
             "responses": [
-                "Make sure you are using a supported browser (Chrome/Firefox/Safari) in order to use our services correctly. Also please ensure that you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>. If you still can't resolve the problem, please write to the developer at 'harryadwani9@gmail.com'"
+                "Make sure you are using a supported browser (Chrome/Firefox/Safari) in order to use our services correctly. Also please ensure that you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>. "
             ],
             "context": [
                 ""
