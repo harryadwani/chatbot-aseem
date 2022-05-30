@@ -34,7 +34,7 @@ def chatbot_response():
     if  msg == "yes" or msg=="Yes" :
         return "I am glad that I could help you out!"
     if  msg == "no" or msg=="No":
-        return "I am so sorry about that. For more assistance you can write to the developer at <a href=\"mailto:harryadwani9@gmail.com\">Send email</a>"
+        return "I am so sorry about that. Please try rephrasing the question for me. If you still don't find your answer, you can write to the developer at <a href=\"mailto:harryadwani9@gmail.com\">Send email</a>"
     if msg.startswith("my name is"):
         name = msg[11:]
         ints = predict_class(msg, model)

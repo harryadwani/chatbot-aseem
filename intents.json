@@ -24,6 +24,19 @@
             ]
         },
         {
+            "tag": "how_are_you",
+            "patterns": [
+                "how are you?",
+                "how are you doing?"
+            ],
+            "responses": [
+                "I am fine, thankyou. Glad you checked in!"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
             "tag": "goodbye",
             "patterns": [
                 "bye",
@@ -144,8 +157,7 @@
             "tag": "lang",
             "patterns": [
                 "What language are you written in ?",
-                "How are you built?",
-                "who made you?"
+                "what is your programming language?"
             ],
             "responses": [
                 "Python",
@@ -281,7 +293,7 @@
         {
             "tag": "login",
             "patterns": [
-                "how to login", 
+                "how to login",
                 "signin",
                 "login using account",
                 "login using username and password"
