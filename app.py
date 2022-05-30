@@ -49,7 +49,7 @@ def chatbot_response():
         ints = predict_class(msg, model)
         res,msg_tag = getResponse(ints, intents)
     # if  msg.find("hi")==1 or msg.find("hello")==1 or msg.find("thanks")==1 or msg.find("thank you")==1 or msg.find("bye")==1:
-    if msg_tag in ["greetings","goodbye","thanks","noanswer",'name1','name','fav','need','lang']:
+    if msg_tag in ["greetings","goodbye","thanks","noanswer",'name1','name','fav','need','lang','how_are_you']:
         return res
     return res + "<br><br><em> Did I solve your problem?(Yes/No)"
 
