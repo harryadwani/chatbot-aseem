@@ -86,8 +86,8 @@
                 "what am I?"
             ],
             "responses": [
-                "I'm just a chat agent for Aseem. I only exist on the internet",
-                "I'm Aseem's chatbot."
+                "I'm just a chat agent for Aseem. My name is ABLE. I only exist on the internet",
+                "I'm Aseem's chatbot. My name is ABLE."
             ],
             "context": [
                 ""
@@ -226,7 +226,7 @@
                 "Who are you?"
             ],
             "responses": [
-                " I am just a chatbot for Aseem"
+                " I am just a chatbot for Aseem. My name is ABLE."
             ],
             "context": [
                 ""
@@ -314,7 +314,8 @@
             "tag": "schedule",
             "patterns": [
                 "how to schedule a meeting",
-                "schedule meeting"
+                "schedule meeting",
+                "how to schedule"
             ],
             "responses": [
                 "Make sure you are logged in successfully. Then click on SCHEDULE button and enter the required details.",
@@ -390,7 +391,7 @@
                 "video not working"
             ],
             "responses": [
-                "Click on the camera icon on screen to switch on/off the camera.Fi   If you still can't turn on your webcam, please ensure you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>"
+                "Click on the camera/mic icon on screen to switch on/off the camera/mic. If you still can't turn on your webcam/mic, please ensure you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>"
             ],
             "context": [
                 ""
@@ -477,7 +478,8 @@
                 "how to record a meeting",
                 "record meeting",
                 "meeting recording",
-                "recording"
+                "recording",
+                "how to record"
             ],
             "responses": [
                 "Meetings can be only recorded by the teachers. Click on three dots button in meeting screen and you will find the start recording button. You will need to sign in with your Dropbox account after which you can store the meeting in your Dropbox account directly"
