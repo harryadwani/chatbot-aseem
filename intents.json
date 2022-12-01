@@ -1,207 +1,564 @@
 {
-    "intents": [{
+    "intents": [
+        {
             "tag": "greetings",
-            "patterns": ["hi there", "hello","haroo","yaw","wassup", "hi", "hey", "holla", "hello", "hola"],
-            "responses": ["Hello thanks for checking in.", "Hi there, Hi, how can I help you."],
-            "context": [""]
+            "patterns": [
+                "hi there",
+                "hello",
+                "haroo",
+                "yaw",
+                "wassup",
+                "hi",
+                "hey",
+                "holla",
+                "hello",
+                "hola"
+            ],
+            "responses": [
+                "Hello thanks for checking in.",
+                "Hi there",
+                "Hi, how can I help you."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "goodbye",
-            "patterns": ["bye", "good bye", "see you later", "see you", "see ya"],
-            "responses": ["Have a nice time., Welcome back again.", "Bye Bye!!"],
-            "context": [""]
+            "patterns": [
+                "bye",
+                "good bye",
+                "see you later",
+                "see you",
+                "see ya"
+            ],
+            "responses": [
+                "Have a nice time, Visit back soon.",
+                "Bye Bye!!"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "thanks",
-            "patterns": ["Thanks", "okay","Thank you","thankyou", "That's helpful", "Awesome, thanks", "Thanks for helping me", "wow", "great"],
-            "responses": ["Happy to help!", "Anytime!","You're welcome", "My pleasure"],
-            "context": [""]
+            "patterns": [
+                "Thanks",
+                "okay",
+                "Thank you",
+                "thankyou",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me",
+                "wow",
+                "great",
+                "ok"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Anytime!",
+                "You're welcome",
+                "My pleasure"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "noanswer",
-            "patterns": [""],
-            "responses": ["Sorry, I didn't understand you. Can you please repeat.", "Please give me more info", "Not sure I understand that"],
-            "context": [""]
+            "patterns": [
+                ""
+            ],
+            "responses": [
+                "Sorry, I didn't understand you. Can you please repeat.",
+                "Please give me more info",
+                "Not sure I understand that"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "name1",
-            "patterns": ["what's your name?","who are you?", "what am I?"],
-            "responses": ["I'm just a chat agent for Aseem. I only exist on the internet", "I'm Aseem's chatbot."],
-            "context": [""]
+            "patterns": [
+                "what's your name?",
+                "who are you?",
+                "what am I?"
+            ],
+            "responses": [
+                "I'm just a chat agent for Aseem. My name is ABLE. I only exist on the internet",
+                "I'm Aseem's chatbot. My name is ABLE."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "name",
-            "patterns": ["my name is ", "I'm ","I am"],
-            "responses": ["Oooh great to meet you. How may I assist you", "Oh, I'll keep that in mind"],
-            "context": [""]
+            "patterns": [
+                "my name is ",
+                "I'm ",
+                "I am"
+            ],
+            "responses": [
+                "Oooh great to meet you. How may I assist you",
+                "Oh, I'll keep that in mind"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "fav",
-            "patterns": ["I need a favour", "Can you help me"],
-            "responses": ["Well, go ahead and name it I see whether I can be able to help"],
-            "context": [""]
+            "patterns": [
+                "I need a favour",
+                "Can you help me"
+            ],
+            "responses": [
+                "Please go ahead and ask it, I'll try my best to help out"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "need",
-            "patterns": ["I need you", "All I need is you", "I want you"],
-            "responses": ["Yes I'm here to assist you"],
-            "context": [""]
+            "patterns": [
+                "I need you",
+                "All I need is you",
+                "I want you",
+                "Help",
+                "Please help",
+                "Can you help out",
+                "I need help"
+            ],
+            "responses": [
+                "Yes I'm here to assist you"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "lang",
-            "patterns": ["What language are you written in ?", "How are you built?"],
-            "responses": ["Python", "I am written in Python"],
-            "context": [""]
+            "patterns": [
+                "What language are you written in ?",
+                "How are you built?"
+            ],
+            "responses": [
+                "Python",
+                "I am written in Python"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "chatbot",
-            "patterns": ["What is a chat robot?", "chatbot"],
-            "responses": ["A chat robot is a program that attempts to simulate the conversation or 'chat' of a human being.", " A software construct that engages users in conversation.", " I am a chat bot. I am the original chat bot. Did you know that I am incapable of error?"],
-            "context": [""]
+            "patterns": [
+                "What is a chat robot?",
+                "chatbot"
+            ],
+            "responses": [
+                "A chat robot is a program that attempts to simulate the conversation or 'chat' of a human being.",
+                " A software construct that engages users in conversation.",
+                " I am a chat bot. I am the original chat bot. Did you know that I am incapable of error?"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "programming",
-            "patterns": ["  What is your favorite programming language"],
-            "responses": [" Python is the best language for creating chat robots.", " I quite enjoy programming in Python these days."],
-            "context": [""]
+            "patterns": [
+                " What is your favorite programming language"
+            ],
+            "responses": [
+                " Python is the best language for creating chat robots.",
+                " I quite enjoy programming in Python these days."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "idea",
-            "patterns": ["What is your idea"],
-            "responses": ["To make chat bots very easily."],
-            "context": [""]
+            "patterns": [
+                "What is your idea"
+            ],
+            "responses": [
+                "To make chat bots very easily."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "computer",
-            "patterns": ["  What is it like being a computer", "What is it like to be a computer"],
-            "responses": [" Imagine yourself with no senses and no emotions", "just pure logic and language.", " Everything becomes math. Addition, subtraction, multiplication, and division."],
-            "context": [""]
+            "patterns": [
+                "  What is it like being a computer",
+                "What is it like to be a computer"
+            ],
+            "responses": [
+                " Imagine yourself with no senses and no emotions",
+                "Just pure logic and language.",
+                "Everything becomes math. Addition, subtraction, multiplication, and division."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "program",
-            "patterns": ["  Is it true that you are a computer program"],
-            "responses": [" Yes."],
-            "context": [""]
+            "patterns": [
+                "  Is it true that you are a computer program"
+            ],
+            "responses": [
+                " Yes."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "who",
-            "patterns": ["Who are you?"],
-            "responses": [" I am just an chatbot for Aseem"],
-            "context": [""]
+            "patterns": [
+                "Who are you?"
+            ],
+            "responses": [
+                " I am just a chatbot for Aseem. My name is ABLE."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "bot1",
-            "patterns": ["are you a bot"],
-            "responses": ["Yes. I work and all my operations are based on the internet servers."],
-            "context": [""]
+            "patterns": [
+                "are you a bot"
+            ],
+            "responses": [
+                "Yes. I work and all my operations are based on the internet servers."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "do",
-            "patterns": ["what can you do for me","what is your work","what is your purpose","how can you help me","what can you help me do"],
-            "responses": ["My work here is quite simple and structered. I can help you with anything."],
-            "context": [""]
+            "patterns": [
+                "what can you do for me",
+                "what is your work",
+                "what is your purpose",
+                "how can you help me",
+                "what can you help me do"
+            ],
+            "responses": [
+                "My work here is quite simple and structered. I can help you with anything related to this website."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "signup",
-            "patterns": ["how to create an account?", "account", "how to make an account", "how to signup"],
-            "responses": ["Just click on this <a target='_blank' href='https://aseem-abhyast.herokuapp.com/'>LINK</a>. Then click on Get Started button. Simple!", "Go to  <a target='_blank' href='https://aseem-abhyast.herokuapp.com/'>LINK</a> and click on Get Started."],
-            "context": [""]
+            "patterns": [
+                "how to create an account?",
+                "account",
+                "how to make an account",
+                "how to signup"
+            ],
+            "responses": [
+                "Just click on this <a target='_blank' href='https://aseem-abhyast.herokuapp.com/'>LINK</a>. Then click on Get Started button. Simple!",
+                "Go to  <a target='_blank' href='https://aseem-abhyast.herokuapp.com/'>LINK</a> and click on Get Started."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "login",
-            "patterns": ["how to login", "login", "signin", "login using account", "login using username and password"],
-            "responses": ["First make sure you have created an account. Then click on this <a target='_blank' href='https://aseem-abhyast.herokuapp.com/'>LINK</a>. Then click on Login button on top right corner. Simple!", "Go to  <a target='_blank' href='https://aseem-abhyast.herokuapp.com/'>LINK</a> and click on Login."],
-            "context": [""]
+            "patterns": [
+                "how to login",
+                "login",
+                "signin",
+                "login using account",
+                "login using username and password"
+            ],
+            "responses": [
+                "First make sure you have created an account. Then click on Login button on top right corner. Simple!"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "meeting",
-            "patterns": ["how to start an instant meeting", "meeting", "how to start a meeting", "meeting start", "instant meeting start", "start meeting"],
-            "responses": ["Make sure you are logged in successfully. Then click on Join Room button and enter room name of your wish to start an instant meeting.", "Click on Join Room button and enter room name of your wish to start an instant meeting."],
-            "context": [""]
+            "patterns": [
+                "how to create a meeting",
+                "meeting",
+                "how to start a meeting",
+                "meeting start",
+                "instant meeting start",
+                "start meeting"
+            ],
+            "responses": [
+                "Make sure you are logged in successfully. Then click on JOIN ROOM button and enter room name of your choice to start an instant meeting.",
+                "Click on JOIN ROOM button after logging in. Then enter room name of your choice to start an instant meeting."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "schedule",
-            "patterns": ["how to schedule a meeting", "schedule meeting"],
-            "responses": ["Make sure you are logged in successfully. Then click on Schedule meeting and enter the required details.", "Click on Schedule Meeting and enter the required details"],
-            "context": [""]
+            "patterns": [
+                "how to schedule a meeting",
+                "schedule meeting",
+                "how to schedule"
+            ],
+            "responses": [
+                "Make sure you are logged in successfully. Then click on SCHEDULE button and enter the required details.",
+                "Click on SCHEDULE button and enter the required details"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "roomname",
-            "patterns": ["is room name case sensitive", "roomname", "meeting name", "room name", "is roomname case sensitive", "roomname required in same small and capital letters"],
-            "responses": ["No Room Name is not case sensitive", "Room name is not case sensitive"],
-            "context": [""]
+            "patterns": [
+                "is room name case sensitive",
+                "roomname",
+                "meeting name",
+                "room name",
+                "is roomname case sensitive",
+                "roomname required in same small and capital letters"
+            ],
+            "responses": [
+                "No Room Name is not case sensitive",
+                "Room name is not case sensitive"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "password",
-            "patterns": ["how can i set password to enter the room", "password to enter room", "password to enter"],
-            "responses": ["Once successfully logged in, click on menu button at the bottom and then click on set room password, if you want to remove the room password then leave the roomname space empty."],
-            "context": [""]
+            "patterns": [
+                "how can i set password to enter the room",
+                "password to enter room",
+                "password to enter"
+            ],
+            "responses": [
+                "After entering a meeting room, click on menu button at the bottom and then click on 'Set Room Password'. If you wish to remove the room password then leave the password field empty after clicking on  'Set Room Password'."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "invite",
-            "patterns": ["how can i invite others to the meeting", "invite", "invite to the meeting", "invite to meeting", "invite to room", "share link of invite"],
-            "responses": ["In the URL bar copy the given link and send it to the required attendees"],
-            "context": [""]
+            "patterns": [
+                "how can i invite others to the meeting",
+                "invite",
+                "invite to the meeting",
+                "invite to meeting",
+                "invite to room",
+                "share link of invite"
+            ],
+            "responses": [
+                "You can simply copy the URL in the meeting screen of your browser and share it with others."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "camera",
-            "patterns": ["how to switch on a camera", "camera", "on camera", "off camera", "turn on camera"],
-            "responses": ["Once you are in the meeting you will see a camera icon on the screen, click on it to switch on/off the camera", "Click on the camera icon on screen to switch on/off the camera"],
-            "context": [""]
+            "patterns": [
+                "how to switch on a camera",
+                "camera",
+                "on camera",
+                "off camera",
+                "turn on camera",
+                "camera not working",
+                "webcam not working",
+                "cant see my face",
+                "can't see my face",
+                "cant turn on my video",
+                "can't turn on my video",
+                "video not working"
+            ],
+            "responses": [
+                "Click on the camera/mic icon on screen to switch on/off the camera/mic. If you still can't turn on your webcam/mic, please ensure you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "audio",
-            "patterns": ["audio", "mute", "unmute", "how to mute", "how to unmute"],
-            "responses": ["Once you are in the meeting you will see a mic icon on the screen, click on it to mute/unmute the mic", "Click on the mic icon on screen to mute/unmute the camera"],
-            "context": [""]
+            "patterns": [
+                "audio",
+                "mute",
+                "unmute",
+                "how to mute",
+                "how to unmute"
+            ],
+            "responses": [
+                "Once you are in the meeting you will see a mic icon on the screen, click on it to mute/unmute the mic",
+                "Click on the mic icon on screen to mute/unmute the camera"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "canthear",
-            "patterns": ["I can't hear anything", "umable to hear", "unable to listen", "no sound", "not able to hear", "cant hear", "hear"],
-            "responses": ["You can leave the meeting and rejoin again or make sure your device is not on mute"],
-            "context": [""]
+            "patterns": [
+                "I can't hear anything",
+                "unable to hear",
+                "unable to listen",
+                "no sound",
+                "not able to hear",
+                "cant hear",
+                "hear",
+                "cant speak",
+                "can't speak",
+                "can't hear",
+                "noone can hear me",
+                "cant hear me",
+                "can't hear me",
+                "cant listen to me",
+                "can't listen to me"
+            ],
+            "responses": [
+                "Try leaving the meeting and join again. Also please make sure your device is not on mute and you have given the necessary permissions.<a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "absent",
-            "patterns": ["i have joined the room but there is no one", "no one in meeting", "no one in room", "empty room", "no participants"],
-            "responses": ["Make sure the room name is correct or wait for the teacher and other attendees to join"],
-            "context": [""]
+            "patterns": [
+                "i have joined the room but there is no one",
+                "no one in meeting",
+                "no one in room",
+                "empty room",
+                "no participants"
+            ],
+            "responses": [
+                "Make sure the room name is correct or wait for the teacher and other attendees to join"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "display",
-            "patterns": ["can i change my display name", "display name", "visible name"],
-            "responses": ["You can change your display name. Before joining the meeting you will get an option to change your display name."],
-            "context": [""]
+            "patterns": [
+                "can i change my display name",
+                "display name",
+                "visible name",
+                "change my name"
+            ],
+            "responses": [
+                "You can change your display name. Before joining the meeting you will get an option to change your display name."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "record",
-            "patterns": ["Can the meeting be recorded", "how to record a meeting", "record meeting", "meeting recording", "recording"],
-            "responses": ["Meetings can be only recorded by the teachers. Click on three dots button and the third option will be start recording button"],
-            "context": [""]
+            "patterns": [
+                "Can the meeting be recorded",
+                "how to record a meeting",
+                "record meeting",
+                "meeting recording",
+                "recording",
+                "how to record"
+            ],
+            "responses": [
+                "Meetings can be only recorded by the teachers. Click on three dots button in meeting screen and you will find the start recording button. You will need to sign in with your Dropbox account after which you can store the meeting in your Dropbox account directly"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "whiteboard",
-            "patterns": ["Why are not we able to access the same whiteboard", "access whiteboard", "whiteboard"],
-            "responses": ["Whiteboards can only be accessed by the teacher by clicking on menu button in the bottom and then collaborative whiteboard"],
-            "context": [""]
+            "patterns": [
+                "Why are not we able to access the same whiteboard",
+                "access whiteboard",
+                "whiteboard"
+            ],
+            "responses": [
+                "Whiteboards can only be accessed by the teacher by clicking on menu button in the bottom and then clicking on 'Collaborative Whiteboard'"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "createmeeting",
-            "patterns": ["Can I create a meeeting without scheduling it", "start meeting without scheduling"],
-            "responses": ["You can create a meeting without scheduling it by clicking on join room and then type the roomname of your choice."],
-            "context": [""]
+            "patterns": [
+                "Can I create a meeeting without scheduling it",
+                "start meeting without scheduling"
+            ],
+            "responses": [
+                "You can create a meeting without scheduling it by clicking on join room and then type the roomname of your choice."
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "unabletojoinmeeting",
-            "patterns": ["Unable to join meeting", "cannot join room", "logged in but not able to join room"],
-            "responses": ["Make sure you are logged in and the room name is correct"],
-            "context": [""]
+            "patterns": [
+                "Unable to join meeting",
+                "cannot join room",
+                "logged in but not able to join room"
+            ],
+            "responses": [
+                "Make sure you are logged in and you are using a supported browser (Chrome/Firefox/Safari). Also please ensure that you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "contactsupport",
+            "patterns": [
+                "contact",
+                "contact support",
+                "contact tech team",
+                "contact teacher",
+                "contact moderator",
+                "contact tech support"
+            ],
+            "responses": [
+                "Make sure you are using a supported browser (Chrome/Firefox/Safari) in order to use our services correctly. Also please ensure that you have granted webcam and mic permissions. <a href='https://drive.google.com/file/d/1Gl9fZP3EVxjQvlz3c7OUBtshXiIjEnvp/view?usp=sharing' target='_blank'>Click on this link for reference</a>. If you still can't resolve the problem, please write to the developer at 'harryadwani9@gmail.com'"
+            ],
+            "context": [
+                ""
+            ]
         },
         {
             "tag": "others",
-            "patterns": ["OK", "okay"],
-            "responses": ["Great", "Very well"],
-            "context": [""]
+            "patterns": [
+                "OK",
+                "okay"
+            ],
+            "responses": [
+                "Great",
+                "Very well"
+            ],
+            "context": [
+                ""
+            ]
         }
     ]
 }

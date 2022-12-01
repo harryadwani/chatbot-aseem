@@ -75,7 +75,7 @@ def main():
 
     model = Sequential()
     model.add(Dense(128, input_shape=(len(train_x[0]),), activation="relu"))
-    model.add(Dropout(0.5))
+    model.add(Dropout(0.2))
     model.add(Dense(64, activation="relu"))
     model.add(Dropout(0.5))
     model.add(Dense(len(train_y[0]), activation="softmax"))
@@ -85,7 +85,7 @@ def main():
     model.compile(loss="categorical_crossentropy", optimizer=sgd, metrics=["accuracy"])
 
     hist = model.fit(
-        np.array(train_x), np.array(train_y), epochs=400, batch_size=5, verbose=1
+        np.array(train_x), np.array(train_y), epochs=200, batch_size=10, verbose=1
     )
     model.save("chatbot_model.h5", hist)
 
