@@ -1,4 +1,7 @@
-# chatbot-aseem
+# chatbot-aseem.   
+Python chatbot to answer generic questions.
+
+
 npm install -g localtunnel
 lt --port 5000 --subdomain harsh
 
