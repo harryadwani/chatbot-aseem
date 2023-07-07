@@ -1,13 +1,13 @@
 # chatbot-aseem.   
-Python chatbot to answer generic questions.
+Python chatbot to answer generic questions and specific questions for the platform aseem.abhyast.in .
 
-
+How to run:
 npm install -g localtunnel
-lt --port 5000 --subdomain harsh
+lt --port 5000 --subdomain <any-subdomain>
 
-to run:
-python train.py after editing intents.json
+To train:
+python train.py (after editing intents.json)
 
-batch=10, epoch=200 latest.
+Use batch=10, epoch=200 latest for tried and tested results.
 
-Update links in intents if domain changes
+Update links in intents if training for your own domain.
